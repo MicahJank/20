@@ -166,7 +166,7 @@ export const PageEditorBody: React.FC<Props> = observer((props) => {
               }}
               handleEditorReady={handleEditorReady}
               ref={editorRef}
-              containerClassName="p-0 pb-64"
+              containerClassName="p-0 pb-64 h-full"
               displayConfig={displayConfig}
               editorClassName="pl-10"
               mentionHandler={{
@@ -193,7 +193,7 @@ export const PageEditorBody: React.FC<Props> = observer((props) => {
               id={pageId}
               ref={readOnlyEditorRef}
               handleEditorReady={handleReadOnlyEditorReady}
-              containerClassName="p-0 pb-64 border-none"
+              containerClassName="p-0 pb-64 border-none h-full"
               displayConfig={displayConfig}
               editorClassName="pl-10"
               mentionHandler={{
