@@ -1,7 +1,7 @@
 # *****************************************************************************
 # STAGE 1: Build the project
 # *****************************************************************************
-FROM node:18-alpine AS builder
+FROM node:22.23.4-alpine AS builder
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN turbo prune --scope=admin --docker
 # *****************************************************************************
 # STAGE 2: Install dependencies & build the project
 # *****************************************************************************
-FROM node:18-alpine AS installer
+FROM node:22.23.4-alpine AS installer
 
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
@@ -52,7 +52,7 @@ RUN yarn turbo run build --filter=admin
 # *****************************************************************************
 # STAGE 3: Copy the project and start it
 # *****************************************************************************
-FROM node:18-alpine AS runner
+FROM node:22.23.4-alpine AS runner
 WORKDIR /app
 
 COPY --from=installer /app/admin/next.config.js .
