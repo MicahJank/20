@@ -54,7 +54,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x" # Specify the Python version you need
+          python-version: "3.12"
       - name: Install Pylint
         run: python -m pip install ruff
       - name: Install Apiserver Dependencies
@@ -71,7 +71,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: '22.23.4'
       - run: yarn install
       - run: yarn lint --filter=admin
 
@@ -84,7 +84,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: '22.23.4'
       - run: yarn install
       - run: yarn lint --filter=space
 
@@ -97,7 +97,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: '22.23.4'
       - run: yarn install
       - run: yarn lint --filter=web
 
@@ -109,7 +109,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: '22.23.4'
       - run: yarn install
       - run: yarn build --filter=admin
 
@@ -121,7 +121,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: '22.23.4'
       - run: yarn install
       - run: yarn build --filter=space
 
@@ -133,6 +133,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: '22.23.4'
       - run: yarn install
       - run: yarn build --filter=web

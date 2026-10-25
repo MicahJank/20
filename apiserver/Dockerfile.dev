@@ -1,4 +1,4 @@
-FROM python:3.12.5-alpine AS backend
+FROM python:3.12-alpine3.22 AS backend
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -9,7 +9,7 @@ RUN apk --no-cache add \
     "bash~=5.2" \
     "libpq" \
     "libxslt" \
-    "nodejs-current" \
+    "nodejs>=22.23.4" \
     "xmlsec" \
     "libffi-dev" \
     "bash~=5.2" \
